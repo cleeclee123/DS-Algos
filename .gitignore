@@ -1,1 +1,5 @@
+# for obvious reasons
 node_modules/
+
+# ignore ts builds to js
+build/
