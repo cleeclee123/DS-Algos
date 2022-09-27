@@ -74,6 +74,24 @@ export class LinkedList implements ILinkedList {
     }
   }
 
+  public deleteBack(): void {
+    if (this.head_ === null || this.head_.next === null) {
+      throw "Invalid";
+    }
+    let newTail = this.index(this.getLength() - 2);
+    newTail.next = null;
+  }
+
+  public deleteFront(): void {
+    if (this.head_ === null) {
+      throw "Invalid";
+    }
+    let temp = this.head_;
+    let newHead = this.head_.next;
+    temp = null;
+    this.head_ = newHead;
+  }
+
   public deleteAt(index: number): void {
     if (index === 0) {
       let node: Node = this.head_;
@@ -134,7 +152,7 @@ export class LinkedList implements ILinkedList {
     while (current != null && current != undefined) {
       if (current.value !== undefined || current.value !== null) {
         list += String(current.value + " -> ");
-      } 
+      }
       current = current.next;
     }
     list += "null";
