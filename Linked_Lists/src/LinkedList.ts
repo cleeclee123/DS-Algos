@@ -132,13 +132,12 @@ export class LinkedList implements ILinkedList {
     let list: string;
     let current: Node = this.head_;
     while (current != null && current != undefined) {
-      if (current === this.tail_) {
-        list += String(current.value);
-      } else if (current.value !== undefined || current.value !== null) {
+      if (current.value !== undefined || current.value !== null) {
         list += String(current.value + " -> ");
-      }
+      } 
       current = current.next;
     }
+    list += "null";
     if (list === undefined) {
       return "Empty List";
     }
