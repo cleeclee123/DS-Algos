@@ -6,9 +6,9 @@
 import { Node } from "./Node";
 
 interface ISearchObj {
-  index?: number,
-  exists?: boolean,
-  node?: Node,
+  index?: number;
+  exists?: boolean;
+  node?: Node;
 }
 
 interface ILinkedList {
@@ -67,7 +67,7 @@ export class LinkedList implements ILinkedList {
     } else {
       let newNode: Node = new Node(newValue);
       let current: Node = this.index(index);
-      let prev: Node = this.index(index-1);
+      let prev: Node = this.index(index - 1);
 
       newNode.next = current;
       prev.next = newNode;
@@ -79,8 +79,8 @@ export class LinkedList implements ILinkedList {
       let node: Node = this.head_;
       let temp: Node = node.next;
       node.next = temp.next;
-      temp.next = null;  
-    } else{
+      temp.next = null;
+    } else {
       let node: Node = this.index(index - 1);
       let temp: Node = node.next;
       node.next = temp.next;
@@ -105,7 +105,7 @@ export class LinkedList implements ILinkedList {
     let current: Node = this.head_;
     while (current != null) {
       searchObj.index += 1;
-      if ((current.value === data)) {
+      if (current.value === data) {
         searchObj.exists = true;
         searchObj.node = current;
         break;
@@ -140,7 +140,7 @@ export class LinkedList implements ILinkedList {
       current = current.next;
     }
     if (list === undefined) {
-      return 'Empty List';
+      return "Empty List";
     }
     return list.substring(9);
   }
