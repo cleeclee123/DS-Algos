@@ -51,3 +51,16 @@ export function getSum(list: LinkedList): number {
   }
   return sum;
 }
+
+// merges second linked list to the first linked list
+export function merge(list1: LinkedList, list2: LinkedList): void {
+  let current: Node = list2.head_;
+  while (current != null) {
+    list1.insertBack(current.value);
+    current = current.next;
+  }
+}
+
+// export function sort(list: LinkedList): void {
+
+// }
