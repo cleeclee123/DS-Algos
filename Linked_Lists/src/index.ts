@@ -1,5 +1,5 @@
 import { LinkedList } from "./LinkedList";
-import { reverseList, addTwoNumbers, getSum, stringify, merge } from "./functions";
+import { reverseList, addTwoNumbers, getSum, stringify, merge, sort } from "./functions";
  
 const list0: LinkedList = new LinkedList();
 const list1: LinkedList = new LinkedList();
@@ -13,10 +13,10 @@ list1.insertBack(3);
 list1.insertBack(4);
 
 
-// merge(list0, list1);
-let merged = list0.printList();
+sort(list0);
+let sorted = list0.printList();
 
-console.log(merged);
+console.log(sorted);
 
 // list1.insertBack(5);
 // list1.insertBack(6);

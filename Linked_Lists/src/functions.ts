@@ -61,6 +61,22 @@ export function merge(list1: LinkedList, list2: LinkedList): void {
   }
 }
 
-// export function sort(list: LinkedList): void {
-
-// }
+// sorts linked list in place 
+export function sort(list: LinkedList): void {
+  let temp: Node = null;
+  let tempData: any;
+  let current: Node = list.head_;
+  while (current != null) {
+    temp = current;
+    while (temp.next != null) {
+      if (temp.value > temp.next.value) {
+        // swap
+        tempData = temp.value;
+        temp.value = temp.next.value;
+        temp.next.value = tempData;
+      }
+      temp = temp.next;
+    }
+    current = current.next;
+  }
+}
