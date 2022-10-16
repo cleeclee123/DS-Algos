@@ -12,11 +12,9 @@ list1.insertBack(6);
 list1.insertBack(3);
 list1.insertBack(4);
 
+let sorted = sort(list0);
 
-sort(list0);
-let sorted = list0.printList();
-
-console.log(sorted);
+console.log(sorted.printList());
 
 // list1.insertBack(5);
 // list1.insertBack(6);
